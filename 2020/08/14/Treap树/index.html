@@ -23,21 +23,21 @@
   <meta name="description" content="Treap树的定义Treap树的名字即为Tree和Heap的结合，它既是一颗二叉查找树(BST)，又满足堆的性质（通过左旋右旋不改变Treap的二叉查找树性质而又尽可能的平衡） Treap树的结构1234567891011struct node&amp;#123;    int l,r,v,siz,rnd,cnt;&amp;#125;p[manx];int cnt;&#x2F;&#x2F;l:左节点id&#x2F;&#x2F;r:右节点id&#x2F;&#x2F;v:节点">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Treap树">
-<meta property="og:url" content="http://yoursite.com/2020/08/14/6/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/08/14/Treap%E6%A0%91/index.html">
 <meta property="og:site_name" content="Sunboy482">
 <meta property="og:description" content="Treap树的定义Treap树的名字即为Tree和Heap的结合，它既是一颗二叉查找树(BST)，又满足堆的性质（通过左旋右旋不改变Treap的二叉查找树性质而又尽可能的平衡） Treap树的结构1234567891011struct node&amp;#123;    int l,r,v,siz,rnd,cnt;&amp;#125;p[manx];int cnt;&#x2F;&#x2F;l:左节点id&#x2F;&#x2F;r:右节点id&#x2F;&#x2F;v:节点">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/08/14/6/1.png">
+<meta property="og:image" content="http://yoursite.com/2020/08/14/Treap%E6%A0%91/1.png">
 <meta property="article:published_time" content="2020-08-14T10:00:00.000Z">
-<meta property="article:modified_time" content="2021-06-08T06:59:32.355Z">
+<meta property="article:modified_time" content="2021-08-02T08:36:04.394Z">
 <meta property="article:author" content="Like">
 <meta property="article:tag" content="树">
 <meta property="article:tag" content="Treap树">
 <meta property="article:tag" content="模板">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/08/14/6/1.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/08/14/Treap%E6%A0%91/1.png">
 
-<link rel="canonical" href="http://yoursite.com/2020/08/14/6/">
+<link rel="canonical" href="http://yoursite.com/2020/08/14/Treap%E6%A0%91/">
 
 
 <script id="page-configurations">
@@ -165,7 +165,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/14/6/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/14/Treap%E6%A0%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -195,7 +195,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-06-08 14:59:32" itemprop="dateModified" datetime="2021-06-08T14:59:32+08:00">2021-06-08</time>
+                <time title="Modified: 2021-08-02 16:36:04" itemprop="dateModified" datetime="2021-08-02T16:36:04+08:00">2021-08-02</time>
               </span>
 
           
@@ -207,8 +207,8 @@
       </span>
       <span class="post-meta-item-text">Valine: </span>
     
-    <a title="valine" href="/2020/08/14/6/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/14/6/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/08/14/Treap%E6%A0%91/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/14/Treap%E6%A0%91/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -236,7 +236,7 @@
 <li>左旋和右旋不改变节点的二叉树查找树性质</li>
 <li>该操作保证$rnd$的<strong>小顶堆</strong>性质</li>
 <li><strong>右旋:</strong> 左儿子的$rnd$小于父节点时，左儿子的右儿子$\Rightarrow$父节点的左儿子，父节点$\Rightarrow$左儿子的新右儿子</li>
-<li><strong>左旋:</strong> 右儿子的$rnd$小于父节点时，右儿子的左儿子$\Rightarrow$父节点的右儿子，父节点$\Rightarrow$右儿子的新左儿子<br><img src="/2020/08/14/6/1.png" alt="Treap树旋转图解"> </li>
+<li><strong>左旋:</strong> 右儿子的$rnd$小于父节点时，右儿子的左儿子$\Rightarrow$父节点的右儿子，父节点$\Rightarrow$右儿子的新左儿子<br><img src="/2020/08/14/Treap%E6%A0%91/1.png" alt="Treap树旋转图解"> </li>
 <li>右旋代码如下<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">rturn</span><span class="params">(<span class="keyword">int</span> &amp;k)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tmp=p[k].l;<span class="comment">//记录左儿子</span></span><br><span class="line">    p[k].l=p[tmp].r;<span class="comment">//左儿子的右儿子变成父节点的左儿子</span></span><br><span class="line">    p[tmp].r=k;<span class="comment">//父节点变成左儿子的新右儿子</span></span><br><span class="line">    p[tmp].siz=p[k].siz;<span class="comment">//整个子树的大小不变</span></span><br><span class="line">    update(k);<span class="comment">//新右节点更新</span></span><br><span class="line">    k=tmp;<span class="comment">//左儿子变成了新父节点，完成了右旋上位</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 <li>左旋同理</li>
 </ul>
@@ -275,8 +275,8 @@
       <i class="fa fa-chevron-left"></i> React源码剖析(一)
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/08/15/7/" rel="next" title="欧拉筛">
-      欧拉筛 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/07/11/Taro%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB(%E4%B8%80)/" rel="next" title="Taro源码解读(一)">
+      Taro源码解读(一) <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -351,14 +351,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
