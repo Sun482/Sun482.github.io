@@ -180,7 +180,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-09-13 16:38:00 / Modified: 16:46:36" itemprop="dateCreated datePublished" datetime="2021-09-13T16:38:00+08:00">2021-09-13</time>
+              <time title="Created: 2021-09-13 16:38:00 / Modified: 16:47:51" itemprop="dateCreated datePublished" datetime="2021-09-13T16:38:00+08:00">2021-09-13</time>
             </span>
 
           
@@ -208,7 +208,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="从fre源码看react-Fiber架构的中断机制"><a href="#从fre源码看react-Fiber架构的中断机制" class="headerlink" title="从fre源码看react Fiber架构的中断机制"></a>从fre源码看react Fiber架构的中断机制</h2><h3 id="浏览器进程和线程"><a href="#浏览器进程和线程" class="headerlink" title="浏览器进程和线程"></a>浏览器进程和线程</h3><p>众所周知，浏览器每次在打开一个新页面的时候会创建一个独立于其他页面的Render进程 <strong>(渲染进程)</strong> ，而在这个渲染进程中包含了页面的渲染、JS的执行、事件的循环(Event Loop)等任务</p>
+          <h3 id="浏览器进程和线程"><a href="#浏览器进程和线程" class="headerlink" title="浏览器进程和线程"></a>浏览器进程和线程</h3><p>众所周知，浏览器每次在打开一个新页面的时候会创建一个独立于其他页面的Render进程 <strong>(渲染进程)</strong> ，而在这个渲染进程中包含了页面的渲染、JS的执行、事件的循环(Event Loop)等任务</p>
 <p><strong>重点概念：浏览器的渲染进程是多线程的</strong></p>
 <p>下面列举一下渲染进程的常驻线程:</p>
 <ul>
